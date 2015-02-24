@@ -20,7 +20,7 @@ var CU_mod = {
 
 	// Where to send folks when they are done
 	teleport_url     : 'http://events.chapman.edu/import/',
-	dev_teleport_url : 'http://eventstest.chapman.edu/import/',
+	dev_teleport_url : 'http://eventsdev.chapman.edu/import/',
 
 	// Configurables
 	seconds_to_watch : 30,
