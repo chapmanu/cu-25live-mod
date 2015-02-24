@@ -1,0 +1,168 @@
+
+/***************************************************
+* Header
+***************************************************/
+.layout .header {
+	color: #252525;
+	border-bottom: none;
+}
+
+.layout .header .logo {
+	background: url(chapmanEventsLogo.png) no-repeat center;
+	background-size: contain;
+	width: 250px;
+	margin-left: 20px;
+}
+
+#s25 .layout-subtabbar-buffer {
+	background: #D6D6D6 !important;
+}
+
+/***************************************************
+* Box headers
+***************************************************/
+#My25Live_table .sectionHead,
+#hiddenWidgets .sectionHead,
+#WhatsNewHeader {
+	background: #E2E2E1 !important;
+}
+
+/***************************************************
+* Links
+***************************************************/
+a, a:link {
+	color: #407892;
+}
+
+#layout-subtabbar .layout-subtabbar-buffer UL.s25-tabarrow LI .layout-subtabbar-label {
+	color: #407892;
+}
+
+.MonthName a, .MonthName a:link {
+	color: #FFFFFF;
+}
+
+/***************************************************
+* Tabs
+***************************************************/
+#s25 #layout-tabbar #s25-tabitem-home,
+#s25 #layout-tabbar #s25-tabitem-new_wizard,
+#s25 #layout-tabbar #s25-tabitem-events,
+#s25 #layout-tabbar #s25-tabitem-locations,
+#s25 #layout-tabbar #s25-tabitem-resources,
+#s25 #layout-tabbar #s25-tabitem-organizations,
+#s25 #layout-tabbar #s25-tabitem-tasks,
+#s25 #layout-tabbar #s25-tabitem-reports {
+	background-color: #999999;
+	color: #FFFFFF;
+	font-weight: normal;
+	letter-spacing: 1px;
+}
+#s25 #layout-tabbar #s25-tabitem-home:hover,
+#s25 #layout-tabbar #s25-tabitem-new_wizard:hover,
+#s25 #layout-tabbar #s25-tabitem-events:hover,
+#s25 #layout-tabbar #s25-tabitem-locations:hover,
+#s25 #layout-tabbar #s25-tabitem-resources:hover,
+#s25 #layout-tabbar #s25-tabitem-organizations:hover,
+#s25 #layout-tabbar #s25-tabitem-tasks:hover,
+#s25 #layout-tabbar #s25-tabitem-reports:hover {
+	background-color: #888888;
+}
+
+#s25 #layout-tabbar .s25-tabitem-sel {
+	background-color: #D5D5D5 !important;
+	color: #252525 !important;
+	font-weight: bold !important;
+	border-bottom: 1px solid #D5D5D5;
+}
+
+/***************************************************
+* Buttons
+***************************************************/
+#s25 .b-button {
+	display: inline-block;
+	background: #dad8cf;
+	border: none;
+	border-radius: 3px;
+	color: #252525;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 16px;
+	padding: 15px 25px;
+	cursor: pointer;
+}
+#s25 .b-button:hover {
+	background: #cfccc1;
+}
+
+#s25 #helpStatusButtonPlaceholder {
+	background: #a82439;
+	color: #FFFFFF;
+	padding: 6px 8px;
+	font-size: 12px;
+}
+#s25 #helpStatusButtonPlaceholder:hover {
+	background: #932032;
+}
+
+#s25 #My25Live_ScheduleEvent #My25Live_btnScheduleEvent {
+	background: #a82439;
+	background-color: #a82439;
+	color: #FFFFFF;
+	padding: 15px 25px;
+}
+#s25 #My25Live_ScheduleEvent #My25Live_btnScheduleEvent:hover {
+	background: #932032;
+}
+
+/***************************************************
+* Button Label: Save > Submit
+***************************************************/
+#wizard_footer_save {
+	position: relative;
+}
+#wizard_footer_save div {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	text-indent: -9999px;
+}
+#wizard_footer_save:before {
+	display: inline-block;
+	content: "Submit";
+	padding-left: 20px;
+	padding-right: 5px;
+}
+
+/***************************************************
+* Old Styles
+***************************************************/
+.layout .header, .layout .header TD {
+	color: #000000;
+}
+
+.layout .header A {
+	color: #252525;
+}
+
+/* Modals */
+#s25 .b-modal-sel .b-modalhead {
+	background-color: #C0DCEA;
+}
+
+#s25 .modal-header-text {
+	color: #000000;
+}
+
+/* 25Live 'space in use' event type */
+#s25 .b-listview .b-listview-tr IMG.in_use {
+	background: #AC14E3;
+}
+
+/* 25Live event type styles */
+/* use the format below to include custom colors for event types */
+/* #s25 .b-listview .b-listview-tr IMG.sample { background:#AC14E3; } */
+div[c\3Apurpose="ContactInfo"] {
+	display: none;
+}
