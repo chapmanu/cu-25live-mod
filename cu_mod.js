@@ -42,6 +42,9 @@ var CU_mod = {
 		// When the user clicks next, filter the text on the page
 		CU_mod.addClickIDCallback('wizard_footer_next', CU_mod.filterTextOnPage, true);
 
+		// Add buttons on the landing page middle column
+		CU_mod.addDOMNodeCallback('My25Live_ScheduleEvent', CU_mod.landingColumnStuff)
+
 		//
 		// LET THE MADNESS BEGIN
 		CU_mod.runTheWatchers();
@@ -201,12 +204,23 @@ var CU_mod = {
 		$heading = $('.card-info-text:contains(Select which CALENDARS should publish this event.)');
 
 		if ($heading.length) {
-			$heading.html('Select which audiences this event is indented for');
+			$heading.html('Select which audiences this event is intended for');
 
 			// Remove some of those pesky comment boxes
-			$('.requirement-editor').remove();
+			setTimeout(function() {
+				$('.requirement-editor').remove();
+			}, 500);
+
 		}
 
+	},
+
+	landingColumnStuff : function() {
+		setTimeout(function() {
+			// Add a "Cancel existing event" button on the home page
+			$('#My25Live_ScheduleEvent .sectionBody').append('<br /><a href="https://www.chapman.edu/campus-services/marketing-communication/requests/secured/event-cancellation-request-form.aspx" class="b-button">Cancel existing event</a>');
+		}, 1000);
+		
 	}
 
 };
