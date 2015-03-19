@@ -136,6 +136,18 @@ var CU_mod = {
 	// Adds a magic button to the done page
 	addMagicButton : function() {
 
+		/*************
+		*
+		* TEMPORARILY DISABLE THIS FUNCTION
+		*
+		**************/
+		return true;
+		/*************
+		*
+		* TEMPORARILY DISABLE THIS FUNCTION
+		*
+		**************/
+
 		$container = $('.summary-section-content:eq(2)');
 
 		if ($container.length) {
