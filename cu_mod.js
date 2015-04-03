@@ -19,16 +19,18 @@ var CU_mod = {
 	debug_mode : false,
 
 	// Where to send folks when they are done
-	teleport_url     : 'http://events.chapman.edu/import/',
-	dev_teleport_url : 'http://eventsdev.chapman.edu/import/',
+	teleport_url     : 'https://events.chapman.edu/series25/import/',
+	dev_teleport_url : 'https://eventsdev.chapman.edu/series25/import/',
 
 	// Configurables
-	seconds_to_watch : 30,
+	seconds_to_watch : 300, // 5 minutes
 	watcher_id : false,
 	dom_callbacks : [],
 	click_callbacks : [],
 
 	initialize : function() {
+
+		if (CU_mod.debug_mode) console.debug("Initialized CU Mod");
 
 		// When the user clicks save, see if we are on the done page
 		CU_mod.addClickIDCallback('wizard_footer_save', CU_mod.startDoneWatcher, true);
@@ -136,18 +138,6 @@ var CU_mod = {
 	// Adds a magic button to the done page
 	addMagicButton : function() {
 
-		/*************
-		*
-		* TEMPORARILY DISABLE THIS FUNCTION
-		*
-		**************/
-		return true;
-		/*************
-		*
-		* TEMPORARILY DISABLE THIS FUNCTION
-		*
-		**************/
-
 		$container = $('.summary-section-content:eq(2)');
 
 		if ($container.length) {
@@ -171,12 +161,9 @@ var CU_mod = {
 		var event_key = $('#wizard_details_reference').text().replace('ID: ', '');
 		var event_num = /[0-9]+(?![^\[])/.exec(window.location.hash);
 
-		console.debug('The ID is:'+event_key);
-		console.debug('The hash is:'+event_num);
-
 		var domain = (window.location.hostname == 'eventstest.chapman.edu') ? CU_mod.dev_teleport_url : CU_mod.teleport_url;
 
-		var destination = domain+'?25_live_key='+event_key+'&25_live_num='+event_num;
+		var destination = (event_key.length > 0) ? domain + event_key : domain + event_num;
 
 		window.location.href = destination;
 	},
